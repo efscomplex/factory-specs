@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Factory specs is an earlier application that runs on low specs hardware at the factory.
+
+The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
