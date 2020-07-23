@@ -11,20 +11,21 @@ export const getRandomItem = (items, module) => {
    return items[i]
 }
 export default function getData(length){
-   let data = new Array(length).fill(0)
 
-   data = data.map( item => (
-      {
-         feature: getRandomItem(features, 3),
-         name: getRandomItem(names, 4),
-         dev: faker.random.number(),
-         devOutTol: faker.random.number(),
-         expected: getRandomItem(
-            [QualityType.ERROR,QualityType.SUCCESS,QualityType.WARNING],
-            3
-         )
-      }
-   ))
-
-   return data
+   return new Promise( (res, rej) => {
+      let data = new Array(length).fill(0)
+      data = data.map( item => (
+         {
+            feature: getRandomItem(features, 3),
+            name: getRandomItem(names, 4),
+            dev: faker.random.number(),
+            devOutTol: faker.random.number(),
+            expected: getRandomItem(
+               [QualityType.ERROR,QualityType.SUCCESS,QualityType.WARNING],
+               3
+            )
+         }
+      ))
+      res(data)
+   })
 }

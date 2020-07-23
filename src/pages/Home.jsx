@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import Feature from 'components/base/FeatureCard'
 import getData, { getRandomItem } from 'services/'
 
@@ -12,20 +12,28 @@ export default function(){
       setFeatures
    ] = useState([])
 
-   const fetchData = length => {
-      let data = getData(length)
-      setFeatures(data)
-   }
+   const fetchData = useCallback(
+      async length => {
+         let data = []
+         try{
+            data = await getData(length)
+         }catch(err){ console.log(err)}
+         setFeatures(data)
+      }, 
+      [setFeatures]
+   )
+ 
    const opts = Array.from(new Set(features.map( item => item.feature )))
-   console.log(opts)
+   const nOfFeatures = Math.floor(Math.random()*100)
+
    useEffect(
       () => {
-         setInterval(
-            fetchData(20),
+         setTimeout(
+            () => fetchData(nOfFeatures),
             5000
          )
       },
-      []
+      [fetchData, nOfFeatures]
    )
 
    return (

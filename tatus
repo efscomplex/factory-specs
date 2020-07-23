@@ -1,0 +1,77 @@
+[33mcommit e509fb2a4285cfd254eb2e1f806303caf5c6390e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: efscomplex <escomplex@gmail.com>
+Date:   Wed Jul 22 19:28:25 2020 +0200
+
+    initial
+
+[1mdiff --git a/jsconfig.json b/jsconfig.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ef1c04f[m
+[1m--- /dev/null[m
+[1m+++ b/jsconfig.json[m
+[36m@@ -0,0 +1,5 @@[m
+[32m+[m[32m{[m[41m[m
+[32m+[m[32m   "compilerOptions": {[m[41m[m
+[32m+[m[32m      "baseUrl": "./src"[m[41m[m
+[32m+[m[32m   }[m[41m[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex 6ad58ff..8f4341f 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -1115,6 +1115,33 @@[m
+       "resolved": "https://registry.npmjs.org/@csstools/normalize.css/-/normalize.css-10.1.0.tgz",[m
+       "integrity": "sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg=="[m
+     },[m
+[32m+[m[32m    "@emotion/is-prop-valid": {[m
+[32m+[m[32m      "version": "0.8.8",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz",[m
+[32m+[m[32m      "integrity": "sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@emotion/memoize": "0.7.4"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@emotion/memoize": {[m
+[32m+[m[32m      "version": "0.7.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@emotion/memoize/-/memoize-0.7.4.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==",[m
+[32m+[m[32m      "dev": true[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@emotion/stylis": {[m
+[32m+[m[32m      "version": "0.8.5",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@emotion/stylis/-/stylis-0.8.5.tgz",[m
+[32m+[m[32m      "integrity": "sha512-h6KtPihKFn3T9fuIrwvXXUOwlx3rfUvfZIcP5a6rh8Y7zjE3O06hT5Ss4S/YI1AYhuZ1kjaE/5EaOOI2NqSylQ==",[m
+[32m+[m[32m      "dev": true[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@emotion/unitless": {[m
+[32m+[m[32m      "version": "0.7.5",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@emotion/unitless/-/unitless-0.7.5.tgz",[m
+[32m+[m[32m      "integrity": "sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==",[m
+[32m+[m[32m      "dev": true[m
+[32m+[m[32m    },[m
+     "@hapi/address": {[m
+       "version": "2.1.4",[m
+       "resolved": "https://registry.npmjs.org/@hapi/address/-/address-2.1.4.tgz",[m
+[36m@@ -1728,6 +1755,15 @@[m
+       "resolved": "https://registry.npmjs.org/@types/stack-utils/-/stack-utils-1.0.1.tgz",[m
+       "integrity": "sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw=="[m
+     },[m
+[32m+[m[32m    "@types/styled-jsx": {[m
+[32m+[m[32m      "version": "2.2.8",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@types/styled-jsx/-/styled-jsx-2.2.8.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Yjye9VwMdYeXfS71ihueWRSxrruuXTwKCbzue4+5b2rjnQ//AtyM7myZ1BEhNhBQ/nL/RE7bdToUoLln2miKvg==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@types/react": "*"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "@types/testing-library__dom": {[m
+       "version": "6.14.0",[m
+       "resolved": "https://registry.npmjs.org/@types/testing-library__dom/-/testing-library__dom-6.14.0.tgz",[m
+[36m@@ -2632,6 +2668,24 @@[m
+       "resolved": "https://registry.npmjs.org/babel-plugin-named-asset-import/-/babel-plugin-named-asset-import-0.3.6.tgz",[m
+       "integrity": "sha512-1aGDUfL1qOOIoqk9QKGIo2lANk+C7ko/fqH0uIyC71x3PEGz0uVP8ISgfEsFuG+FKmjHTvFK/nNM8dowpmUxLA=="[m
+     },[m
+[32m+[m[3
